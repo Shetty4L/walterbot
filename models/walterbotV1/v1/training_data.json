@@ -1,0 +1,153 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "hey", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "hi", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "hello", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "good morning", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "good evening", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "good afternoon", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "good day", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "how are you doing", 
+        "intent": "greet"
+      }, 
+      {
+        "text": "tell me what you did", 
+        "intent": "ask_confession"
+      }, 
+      {
+        "text": "did you sell drugs?", 
+        "intent": "ask_confession"
+      }, 
+      {
+        "text": "did you make drugs?", 
+        "intent": "ask_confession"
+      }, 
+      {
+        "text": "i know you did it", 
+        "intent": "ask_confession"
+      }, 
+      {
+        "text": "you made drugs, right?", 
+        "intent": "ask_confession"
+      }, 
+      {
+        "text": "are you a drug dealer?", 
+        "intent": "ask_confession"
+      }, 
+      {
+        "text": "are you Heisenberg?", 
+        "intent": "ask_confession"
+      }, 
+      {
+        "text": "you're going to go down for this", 
+        "intent": "threaten"
+      }, 
+      {
+        "text": "we'll put you away for a long time", 
+        "intent": "threaten"
+      }, 
+      {
+        "text": "your family are going to suffer now", 
+        "intent": "threaten"
+      }, 
+      {
+        "text": "all your money will be taken", 
+        "intent": "threaten"
+      }, 
+      {
+        "text": "you're going away for 20+ years", 
+        "intent": "threaten"
+      }, 
+      {
+        "text": "your kids will be adults by the time you get out", 
+        "intent": "threaten"
+      }, 
+      {
+        "text": "good job", 
+        "intent": "praise"
+      }, 
+      {
+        "text": "you made your life so much easier", 
+        "intent": "praise"
+      }, 
+      {
+        "text": "you did good", 
+        "intent": "praise"
+      }, 
+      {
+        "text": "i can reduce your jail time by half", 
+        "intent": "good_offer"
+      }, 
+      {
+        "text": "i can make sure your kids won't suffer because of this", 
+        "intent": "good_offer"
+      }, 
+      {
+        "text": "we'll make sure you do the minimum time possible", 
+        "intent": "good_offer"
+      }, 
+      {
+        "text": "i'll take two years off your sentence", 
+        "intent": "bad_offer"
+      }, 
+      {
+        "text": "we won't send you to Max", 
+        "intent": "bad_offer"
+      }, 
+      {
+        "text": "fine, have it your way", 
+        "intent": "give_up"
+      }, 
+      {
+        "text": "fine be like that", 
+        "intent": "give_up"
+      }, 
+      {
+        "text": "i'll see you in the trial then", 
+        "intent": "give_up"
+      }, 
+      {
+        "text": "bye", 
+        "intent": "goodbye"
+      }, 
+      {
+        "text": "goodbye", 
+        "intent": "goodbye"
+      }, 
+      {
+        "text": "see you soon", 
+        "intent": "goodbye"
+      }, 
+      {
+        "text": "see you", 
+        "intent": "goodbye"
+      }
+    ], 
+    "entity_synonyms": [], 
+    "regex_features": [], 
+    "lookup_tables": []
+  }
+}
