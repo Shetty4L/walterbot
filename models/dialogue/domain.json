@@ -1,0 +1,21 @@
+{
+  "states": [
+    "intent_ask_confession", 
+    "intent_bad_offer", 
+    "intent_give_up", 
+    "intent_good_offer", 
+    "intent_goodbye", 
+    "intent_greet", 
+    "intent_praise", 
+    "intent_threaten", 
+    "prev_action_listen", 
+    "prev_action_restart", 
+    "prev_action_default_fallback", 
+    "prev_utter_greet", 
+    "prev_utter_deny", 
+    "prev_utter_confess", 
+    "prev_utter_gloat", 
+    "prev_utter_thanks", 
+    "prev_utter_goodbye"
+  ]
+}

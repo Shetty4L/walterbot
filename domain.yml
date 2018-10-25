@@ -1,0 +1,52 @@
+intents:
+  - greet
+  - goodbye
+  - ask_confession
+  - threaten
+  - good_offer
+  - bad_offer
+  - praise
+  - give_up
+
+actions:
+- utter_greet
+- utter_deny
+- utter_confess
+- utter_gloat
+- utter_thanks
+- utter_goodbye
+
+templates:
+  utter_greet:
+  - text: "Good day"
+  - text: "How you doing"
+  - text: "Hello"
+  - text: "Hey"
+  - text: "What's up"
+
+  utter_deny:
+  - text: "I didn't do it"
+  - text: "I have no idea what you're talking about"
+  - text: "You've made a mistake, it wasn't me"
+  - text: "I had nothing to do with this"
+
+  utter_confess:
+  - text: "Fine, I did it. I had no other choice"
+  - text: "Ok it's true. I did it. I was desperate"
+  - text: "Fine, you got me. I made and sold drugs"
+  - text: "Yes, I made those drugs"
+  - text: "Yes, I sold those drugs"
+
+  utter_gloat:
+  - text: "Good try"
+  - text: "You'll never be able to prove anything"
+  - text: "You'll never get me"
+
+  utter_thanks:
+  - text: "Thanks"
+  - text: "I hope I did the right thing"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "See you"
+  - text: "Goodbye"
