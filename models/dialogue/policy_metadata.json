@@ -13,16 +13,37 @@
     "rasa_core.policies.keras_policy.KerasPolicy"
   ], 
   "action_fingerprints": {
-    "utter_thanks": {
+    "utter_greet": {
       "slots": []
+    }, 
+    "action_update_confess_level": {
+      "slots": [
+        "confess_level"
+      ]
+    }, 
+    "utter_deny": {
+      "slots": []
+    }, 
+    "action_listen": {
+      "slots": [
+        "offer"
+      ]
     }, 
     "utter_goodbye": {
       "slots": []
     }, 
-    "action_listen": {
+    "action_calculate_compliance": {
+      "slots": [
+        "compliance"
+      ]
+    }, 
+    "utter_confess_details": {
       "slots": []
     }, 
-    "utter_greet": {
+    "utter_confess": {
+      "slots": []
+    }, 
+    "utter_thanks": {
       "slots": []
     }
   }

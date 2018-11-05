@@ -2,30 +2,49 @@ actions:
 - utter_greet
 - utter_deny
 - utter_confess
+- utter_confess_details
 - utter_gloat
 - utter_thanks
 - utter_goodbye
+- action_calculate_compliance
+- action_update_confess_level
 config:
   store_entities_as_slots: true
-entities: []
+entities:
+- offer
 intents:
-- ask_confession:
-    use_entities: true
-- good_offer:
-    use_entities: true
 - praise:
     use_entities: true
-- goodbye:
-    use_entities: true
-- threaten:
+- ask_confession:
     use_entities: true
 - give_up:
     use_entities: true
+- goodbye:
+    use_entities: true
+- give_offer:
+    use_entities: true
+- threaten:
+    use_entities: true
 - greet:
     use_entities: true
-- bad_offer:
-    use_entities: true
-slots: {}
+slots:
+  compliance:
+    initial_value: 0.0
+    max_value: 1.0
+    min_value: 0.0
+    type: rasa_core.slots.FloatSlot
+  confess_level:
+    initial_value: low
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - low
+    - medium
+    - high
+  offer:
+    initial_value: 0.0
+    max_value: 20.0
+    min_value: 0.0
+    type: rasa_core.slots.FloatSlot
 templates:
   utter_confess:
   - text: Fine, I did it. I had no other choice
@@ -33,6 +52,10 @@ templates:
   - text: Fine, you got me. I made and sold drugs
   - text: Yes, I made those drugs
   - text: Yes, I sold those drugs
+  utter_confess_details:
+  - text: Gus made me do everything. He's the one you want.
+  - text: I cooked the drugs in my RV, in the desert
+  - text: Jesse Pinkman helped me do it
   utter_deny:
   - text: I didn't do it
   - text: I have no idea what you're talking about

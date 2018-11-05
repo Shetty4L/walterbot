@@ -7,6 +7,7 @@
 - good afternoon
 - good day
 - how are you doing
+- my name is jim
 
 ## intent: ask_confession
 - tell me what you did
@@ -16,6 +17,9 @@
 - you made drugs, right?
 - are you a drug dealer?
 - are you Heisenberg?
+- what did you do
+- tell me everything
+- who helped you
 
 ## intent: threaten
 - you're going to go down for this
@@ -24,20 +28,20 @@
 - all your money will be taken
 - you're going away for over 20 years
 - your kids will be adults by the time you get out
+- you will rot in jail for ages
 
 ## intent: praise
 - good job
 - you made your life so much easier
 - you did good
 
-## intent: good_offer
-- i can reduce your jail time by half
-- i can make sure your kids won't suffer because of this
-- we'll make sure you do the minimum time possible
-
-## intent: bad_offer
-- i'll take two years off your sentence
-- we won't send you to Max
+## intent: give_offer
+- i will take time off your sentence
+- i will take [5](offer) years off your sentence
+- i will reduce your jail time by [2](offer) years
+- i will take [8](offer) years off your sentence
+- i will make sure you spend less time in jail
+- i will cut your jail time in [half](offer:10)
 
 ## intent: give_up
 - fine, have it your way

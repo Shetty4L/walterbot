@@ -34,6 +34,10 @@
         "intent": "greet"
       }, 
       {
+        "text": "my name is jim", 
+        "intent": "greet"
+      }, 
+      {
         "text": "tell me what you did", 
         "intent": "ask_confession"
       }, 
@@ -62,6 +66,18 @@
         "intent": "ask_confession"
       }, 
       {
+        "text": "what did you do", 
+        "intent": "ask_confession"
+      }, 
+      {
+        "text": "tell me everything", 
+        "intent": "ask_confession"
+      }, 
+      {
+        "text": "who helped you", 
+        "intent": "ask_confession"
+      }, 
+      {
         "text": "you're going to go down for this", 
         "intent": "threaten"
       }, 
@@ -78,11 +94,15 @@
         "intent": "threaten"
       }, 
       {
-        "text": "you're going away for 20+ years", 
+        "text": "you're going away for over 20 years", 
         "intent": "threaten"
       }, 
       {
         "text": "your kids will be adults by the time you get out", 
+        "intent": "threaten"
+      }, 
+      {
+        "text": "you will rot in jail for ages", 
         "intent": "threaten"
       }, 
       {
@@ -98,24 +118,60 @@
         "intent": "praise"
       }, 
       {
-        "text": "i can reduce your jail time by half", 
-        "intent": "good_offer"
+        "text": "i will take time off your sentence", 
+        "intent": "give_offer"
       }, 
       {
-        "text": "i can make sure your kids won't suffer because of this", 
-        "intent": "good_offer"
+        "entities": [
+          {
+            "start": 12, 
+            "end": 13, 
+            "value": "5", 
+            "entity": "offer"
+          }
+        ], 
+        "intent": "give_offer", 
+        "text": "i will take 5 years off your sentence"
       }, 
       {
-        "text": "we'll make sure you do the minimum time possible", 
-        "intent": "good_offer"
+        "entities": [
+          {
+            "start": 32, 
+            "end": 33, 
+            "value": "2", 
+            "entity": "offer"
+          }
+        ], 
+        "intent": "give_offer", 
+        "text": "i will reduce your jail time by 2 years"
       }, 
       {
-        "text": "i'll take two years off your sentence", 
-        "intent": "bad_offer"
+        "entities": [
+          {
+            "start": 12, 
+            "end": 13, 
+            "value": "8", 
+            "entity": "offer"
+          }
+        ], 
+        "intent": "give_offer", 
+        "text": "i will take 8 years off your sentence"
       }, 
       {
-        "text": "we won't send you to Max", 
-        "intent": "bad_offer"
+        "text": "i will make sure you spend less time in jail", 
+        "intent": "give_offer"
+      }, 
+      {
+        "entities": [
+          {
+            "start": 29, 
+            "end": 33, 
+            "value": "10", 
+            "entity": "offer"
+          }
+        ], 
+        "intent": "give_offer", 
+        "text": "i will cut your jail time in half"
       }, 
       {
         "text": "fine, have it your way", 
@@ -146,7 +202,14 @@
         "intent": "goodbye"
       }
     ], 
-    "entity_synonyms": [], 
+    "entity_synonyms": [
+      {
+        "synonyms": [
+          "half"
+        ], 
+        "value": "10"
+      }
+    ], 
     "regex_features": [], 
     "lookup_tables": []
   }
