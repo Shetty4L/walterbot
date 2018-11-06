@@ -21,6 +21,7 @@
 ## give offer
 * give_offer {"offer": "2"}
   - action_calculate_compliance
+  - slot{"compliance": 0.1}
   - action_update_confess_level
   - slot{"confess_level" : "low"}
   - utter_deny
@@ -28,6 +29,7 @@
 ## give offer 2
 * give_offer
   - action_calculate_compliance
+  - slot{"compliance": 0.6}
   - action_update_confess_level
   - slot{"confess_level" : "medium"}
   - utter_confess
@@ -35,6 +37,7 @@
 ## give offer 3
 * give_offer {"offer": "10"}
   - action_calculate_compliance
+  - slot{"compliance": 0.8}
   - action_update_confess_level
   - slot{"confess_level" : "high"}
   - utter_confess

@@ -53,3 +53,4 @@
 - goodbye
 - see you soon
 - see you
+- thanks
