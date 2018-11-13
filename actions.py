@@ -9,10 +9,13 @@ class ActionCalculateCompliance(Action):
 	def run(self, dispatcher, tracker, domain):
       # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
 
-		# respect = tracker.get_slot('respect')
-		# bonding = tracker.get_slot('bonding')
-		# fear = tracker.get_slot('fear')
-		# trust = tracker.get_slot('trust')
+		sentiment = tracker.get_slot('sentiment')
+		empathy = tracker.get_slot('empathy') 
+		fear = tracker.get_slot('fear') 
+		anger = tracker.get_slot('anger') 
+		guilt = tracker.get_slot('guilt') 
+		trust = tracker.get_slot('trust') 
+
 		offer = int(tracker.get_slot('offer'))
 		print offer
 		current_compliance = tracker.get_slot('compliance')
