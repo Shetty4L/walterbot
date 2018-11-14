@@ -8,6 +8,8 @@
 - good day
 - how are you doing
 - my name is jim
+- how's your day been
+- how are you feeling
 
 ## intent: ask_confession
 - tell me what you did
@@ -31,6 +33,18 @@
 - you won't get away this
 - you have no chance
 
+## intent: threaten_family
+- your family is going to suffer now
+- all your money will be taken
+- your family will have nothing
+- your family will be punished for your actions
+- your family will have nothing
+- you will never be able to see your family again
+- your wife and kids will suffer
+- people who depend on you will suffer
+- your wife will hate you
+- your children will hate you
+
 ## intent: reassure
 - i'm going to help you through this
 - you're going to be ok
@@ -46,18 +60,10 @@
 - what you did was inexcusable
 - how could you do something so horrible
 - how could you ever do something this bad 
-
-## intent: threaten_family
-- your family is going to suffer now
-- all your money will be taken
-- your family will have nothing
-- your family will be punished for your actions
-- your family will have nothing
-- you will never be able to see your family again
-- your wife and kids will suffer
-- people who depend on you will suffer
-- your wife will hate you
-- your children will hate you
+- you are a horrible person
+- you are a terrible human
+- you make me sick
+- people like you are ruining society
 
 ## intent: praise
 - good job

@@ -19,6 +19,7 @@ actions:
 - utter_deny
 - utter_confess
 - utter_confess_details
+- utter_confess_accomplices
 - utter_gloat
 - utter_thanks
 - utter_goodbye
@@ -99,9 +100,12 @@ templates:
   - text: "Yes, I sold those drugs"
 
   utter_confess_details:
-  - text: "Gus made me do everything. He's the one you want."
-  - text: "I cooked the drugs in my RV, in the desert"
+  - text: "Fine. I cooked the drugs in my RV, in the desert"
+  - text: "Fine, I'll tell you everything"
+
+  utter_confess_accomplices:
   - text: "Jesse Pinkman helped me do it"
+  - text: "Gus made me do everything. He's the one you want."
 
   utter_gloat:
   - text: "Good try"

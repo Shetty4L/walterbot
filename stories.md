@@ -77,3 +77,23 @@
     - utter_confess
     - utter_confess_details
 
+## threatening
+* threaten_suspect
+  - action_update_fear
+
+## threatening family
+* threaten_family
+  - action_update_anger
+  - action_decrease_sentiment
+  - action_decrease_trust
+
+## reassuring
+* reassure
+  - action_update_trust
+  - action_increase_sentiment
+
+## judging
+* judge
+  - action_update_anger
+  - action_decrease_sentiment
+
