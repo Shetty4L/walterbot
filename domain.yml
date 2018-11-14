@@ -2,10 +2,17 @@ intents:
   - greet
   - goodbye
   - ask_confession
-  - threaten
+  - threaten_suspect
+  - threaten_family
+  - judge
+  - evoke_guilt
   - give_offer
+  - emphathise
   - praise
   - give_up
+  - reassure
+  - ask_accomplices
+  - ask_details
 
 actions:
 - utter_greet
@@ -39,6 +46,36 @@ slots:
     - medium
     - high
     initial_value: "low"
+  sentiment:
+    type: float
+    min_value: -1.0
+    max_value: 1.0
+    initial_value: 0.0
+  empathy:
+    type: float
+    min_value: -1.0
+    max_value: 1.0
+    initial_value: 0.0
+  fear:
+    type: float
+    min_value: 0.0
+    max_value: 1.0
+    initial_value: 0.0
+  anger:
+    type: float
+    min_value: 0.0
+    max_value: 1.0
+    initial_value: 0.0
+  guilt:
+    type: float
+    min_value: 0.0
+    max_value: 1.0
+    initial_value: 0.2
+  trust:
+    type: float
+    min_value: 0.0
+    max_value: 1.0
+    initial_value: 0.0
 
 templates:
   utter_greet:
