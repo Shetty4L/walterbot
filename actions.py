@@ -7,13 +7,13 @@ class ActionUpdateConfessLevel(Action):
 		return "action_update_confess_level"
 
 	def run(self, dispatcher, tracker, domain):
-      # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
+      # type: (Dispatcher, DialogueStateTracker, Domain) -> Slots
 
-		sentiment = int(tracker.get_slot('sentiment'))
-		fear = int(tracker.get_slot('fear')) 
-		anger = int(tracker.get_slot('anger')) 
-		guilt = int(tracker.get_slot('guilt')) 
-		trust = int(tracker.get_slot('trust'))
+		sentiment = float(tracker.get_slot('sentiment'))
+		fear = float(tracker.get_slot('fear')) 
+		anger = float(tracker.get_slot('anger')) 
+		guilt = float(tracker.get_slot('guilt')) 
+		trust = float(tracker.get_slot('trust'))
 		offer = int(tracker.get_slot('offer'))
 
 		current_compliance = float(tracker.get_slot('compliance'))
@@ -61,3 +61,105 @@ class ActionConfess(Action):
       # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
 
 		return [SlotSet("confessed", True)]
+
+class ActionIncreaseSentiment(Action):
+	def name(self):
+		# type: () -> Text
+		return "action_increase_sentiment"
+
+	def run(self, dispatcher, tracker, domain):
+		# type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
+		sentiment = float(tracker.get_slot('sentiment'))
+		return [SlotSet("sentiment", sentiment += 0.1)]
+
+class ActionDecreaseSentiment(Action):
+	def name(self):
+		# type: () -> Text
+		return "action_decrease_sentiment"
+
+	def run(self, dispatcher, tracker, domain):
+		# type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
+		sentiment = float(tracker.get_slot('sentiment'))
+		return [SlotSet("sentiment", sentiment -= 0.1)]
+
+class ActionIncreaseFear(Action):
+	def name(self):
+		# type: () -> Text
+		return "action_increase_fear"
+
+	def run(self, dispatcher, tracker, domain):
+		# type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
+		fear = float(tracker.get_slot('fear'))
+		return [SlotSet("fear", fear += 0.1)]
+
+class ActionDecreaseFear(Action):
+	def name(self):
+		# type: () -> Text
+		return "action_decrease_fear"
+
+	def run(self, dispatcher, tracker, domain):
+		# type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
+		fear = float(tracker.get_slot('fear'))
+		return [SlotSet("fear", fear -= 0.1)]
+
+class ActionIncreaseAnger(Action):
+	def name(self):
+		# type: () -> Text
+		return "action_increase_anger"
+
+	def run(self, dispatcher, tracker, domain):
+		# type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
+		anger = float(tracker.get_slot('anger'))
+		return [SlotSet("anger", anger += 0.1)]
+
+class ActionDecreaseAnger(Action):
+	def name(self):
+		# type: () -> Text
+		return "action_decrease_anger"
+
+	def run(self, dispatcher, tracker, domain):
+		# type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
+		anger = float(tracker.get_slot('anger'))
+		return [SlotSet("anger", anger -= 0.1)]
+
+class ActionIncreaseGuilt(Action):
+	def name(self):
+		# type: () -> Text
+		return "action_increase_guilt"
+
+	def run(self, dispatcher, tracker, domain):
+		# type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
+		guilt = float(tracker.get_slot('guilt'))
+		return [SlotSet("guilt", guilt += 0.1)]
+
+class ActionDecreaseGuilt(Action):
+	def name(self):
+		# type: () -> Text
+		return "action_decrease_guilt"
+
+	def run(self, dispatcher, tracker, domain):
+		# type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
+		guilt = float(tracker.get_slot('guilt'))
+		return [SlotSet("guilt", guilt -= 0.1)]
+
+class ActionIncreaseTrust(Action):
+	def name(self):
+		# type: () -> Text
+		return "action_increase_trust"
+
+	def run(self, dispatcher, tracker, domain):
+		# type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
+		trust = float(tracker.get_slot('trust'))
+		return [SlotSet("trust", trust += 0.1)]
+
+class ActionDecreaseTrust(Action):
+	def name(self):
+		# type: () -> Text
+		return "action_decrease_trust"
+
+	def run(self, dispatcher, tracker, domain):
+		# type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
+		trust = float(tracker.get_slot('trust'))
+		return [SlotSet("trust", trust -= 0.1)]
+
+

@@ -32,6 +32,7 @@
 
 ## threatening
 * threaten_suspect
+  - action_increase_fear
   - action_update_confess_level
 
 ## threatening family
