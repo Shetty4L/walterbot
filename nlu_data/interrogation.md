@@ -53,7 +53,7 @@
 - i can make sure your kids will be looked after
 - i'll make sure you get the minimum time possible
 - i can make sure the judge goes easy on you
-- i can help your family get your money back
+- i can help your family
 
 ## intent: judge
 - what you did was despicable

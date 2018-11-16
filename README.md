@@ -7,10 +7,7 @@ Run Action Server:
 python -m rasa_core_sdk.endpoint --actions actions
 
 Run Interactive:
-python -m rasa_core.train \
-  --online -o models/dialogue \
-  -d domain.yml -s stories.md \
-  --endpoints endpoints.yml
+python -m rasa_core.train --online -o models/dialogue -d domain.yml -s stories.md --endpoints endpoints.yml
 
 Train Rasa Core:
 python -m rasa_core.train -d domain.yml -s stories.md -o models/dialogue

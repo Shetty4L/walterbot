@@ -7,7 +7,7 @@ intents:
   - judge
   - evoke_guilt
   - give_offer
-  - emphathise
+  - empathise
   - praise
   - give_up
   - reassure
@@ -20,11 +20,23 @@ actions:
 - utter_confess
 - utter_confess_details
 - utter_confess_accomplices
+- utter_protect_accomplices
 - utter_gloat
 - utter_thanks
 - utter_goodbye
-- action_calculate_compliance
 - action_update_confess_level
+- action_confess
+- action_increase_sentiment
+- action_decrease_sentiment
+- action_increase_fear
+- action_decrease_fear
+- action_increase_anger
+- action_decrease_anger
+- action_increase_guilt
+- action_decrease_guilt
+- action_increase_trust
+- action_decrease_trust
+
 
 entities:
 - offer
@@ -52,11 +64,6 @@ slots:
     min_value: -1.0
     max_value: 1.0
     initial_value: 0.0
-  empathy:
-    type: float
-    min_value: -1.0
-    max_value: 1.0
-    initial_value: 0.0
   fear:
     type: float
     min_value: 0.0
@@ -77,6 +84,9 @@ slots:
     min_value: 0.0
     max_value: 1.0
     initial_value: 0.0
+  confessed:
+    type: bool
+    initial_value: False
 
 templates:
   utter_greet:
@@ -106,6 +116,10 @@ templates:
   utter_confess_accomplices:
   - text: "Jesse Pinkman helped me do it"
   - text: "Gus made me do everything. He's the one you want."
+
+  utter_protect_accomplices:
+  - text: "I did everything alone. Nobody helped me."
+  - text: "Nobody else was involved"
 
   utter_gloat:
   - text: "Good try"
