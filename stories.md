@@ -2,8 +2,21 @@
 * greet
   - utter_greet
 
-## asking for confession
+## asking for confession high level
 * ask_confession
+  - slot{"confess_level" : "high"}
+  - utter_confess
+  - action_confess
+
+## asking for confession medium level
+* ask_confession
+  - slot{"confess_level" : "medium"}
+  - utter_confess
+  - action_confess
+
+## asking for confession low level
+* ask_confession
+  - slot{"confess_level" : "low"}
   - utter_deny
 
 ## give bad offer
@@ -76,6 +89,7 @@
   - slot{"confess_level": "high"}
   - slot{"confessed": false}
   - utter_confess
+  - action_confess
   - utter_confess_accomplices
 
 ## asking about accomplices failure and already confessed

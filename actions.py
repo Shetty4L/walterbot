@@ -34,11 +34,16 @@ class ActionUpdateConfessLevel(Action):
 
 		confess_level_slot = SlotSet("confess_level", confess_level)
 
-		if confess_level == "high":
+		has_confessed = tracker.get_slot('confessed')
+
+		if (not has_confessed) and (confess_level == "high" or confess_level == "medium"):
+			confessed_slot = SlotSet("confessed", True)
 			dispatcher.utter_template("utter_confess", tracker)
+			return [compliance_slot, confess_level_slot, confessed_slot]
 
 		return [compliance_slot, confess_level_slot]
 
+	def calculateCompliance(self, current_compliance, sentiment, fear, anger, guilt, trust, offer):
 		# if offer >= 10:
 		# 	return [SlotSet("compliance", 0.8)]
 		# elif offer >= 5:
@@ -48,8 +53,7 @@ class ActionUpdateConfessLevel(Action):
 		# else:
 		# 	return [SlotSet("compliance", 0.0)]
 
-	def calculateCompliance(self, current_compliance, sentiment, fear, anger, guilt, trust, offer):
-		return current_compliance + 0.2
+		return current_compliance + 0.5
 
 class ActionConfess(Action):
 	def name(self):
