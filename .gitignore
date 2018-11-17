@@ -2,3 +2,4 @@ venv/
 models/
 .DS_Store
 *.pyc
+*.log
