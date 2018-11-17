@@ -25,6 +25,9 @@
 ## intent: filler_conversation
 - do you want to tell us anything
 - do you know why we're here
+- do you know why you are here
+- do you know what we're doing here
+- are you aware of why we're questioning you
 
 ## intent: ask_confession
 - tell me what you did
