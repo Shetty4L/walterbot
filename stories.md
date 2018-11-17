@@ -2,6 +2,18 @@
 * greet
   - utter_greet
 
+## formalities
+* pre_recite_miranda
+    - utter_affirmative
+
+## formalities: recite_miranda
+* recite_miranda
+    - utter_affirmative
+
+## filler convo
+* filler_conversation
+    - utter_affirmative
+
 ## asking for confession high level
 * ask_confession
   - slot{"confess_level" : "high"}
@@ -23,7 +35,7 @@
   - slot{"confess_level" : "low"}
   - utter_deny
 
-## give ok offer 
+## give ok offer
 * give_offer {"offer": "5"}
   - action_update_confess_level
   - slot{"confess_level" : "medium"}
@@ -104,5 +116,3 @@
 * ask_accomplices
   - slot{"confess_level": "low"}
   - utter_deny
-
-

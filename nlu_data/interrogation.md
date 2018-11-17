@@ -11,6 +11,21 @@
 - how's your day been
 - how are you feeling
 
+## intent: pre_recite_miranda
+- we are going to read your Miranda rights
+- we already advised you of your rights
+- we are going to go through the Miranda warning again
+
+## intent: recite_miranda
+- you have the right to remain silent
+- anything you say can and will be used against you in a court
+- you have the right to counsel a lawyer before answering any questions and have a lawyer with you during any questions
+- do you understand your rights as I explained them to you
+
+## intent: filler_conversation
+- do you want to tell us anything
+- do you know why we're here
+
 ## intent: ask_confession
 - tell me what you did
 - did you sell drugs?
@@ -55,11 +70,11 @@
 - i can make sure the judge goes easy on you
 - i can help your family
 
-## intent: judge
+## intent: judge
 - what you did was despicable
 - what you did was inexcusable
 - how could you do something so horrible
-- how could you ever do something this bad 
+- how could you ever do something this bad
 - you are a horrible person
 - you are a terrible human
 - you make me sick
@@ -80,7 +95,7 @@
 
 ## intent: evoke_guilt
 - you sold so many drugs that have probably killed people
-- drugs are harmful 
+- drugs are harmful
 - the main market for your drugs were young kids
 - you've probably been responsible for thousands of overdoses
 - how will your kids feel knowing that their father is a drug lord
@@ -92,7 +107,7 @@
 - people got hooked on drugs because of you
 - instead of using your chemistry knowledge to advance society, you used it to produce drugs
 - how much does it prey on your mind
-- do you not have a conscience 
+- do you not have a conscience
 - don't you feel guilty
 
 ## intent: empathise
@@ -118,7 +133,7 @@
 ## intent: ask_accomplices
 - who helped you
 - who was responsible for this
-- who were you working for 
+- who were you working for
 - who else was involved
 - who was helping you sell the drugs
 - who were you cooking drugs for
