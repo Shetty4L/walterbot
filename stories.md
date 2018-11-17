@@ -5,13 +5,11 @@
 ## asking for confession high level
 * ask_confession
   - slot{"confess_level" : "high"}
-  - utter_confess
   - action_confess
 
 ## asking for confession medium level
 * ask_confession
   - slot{"confess_level" : "medium"}
-  - utter_confess
   - action_confess
 
 ## asking for confession low level
@@ -29,14 +27,12 @@
 * give_offer {"offer": "5"}
   - action_update_confess_level
   - slot{"confess_level" : "medium"}
-  - utter_confess
   - action_confess
 
 ## give offer high
 * give_offer {"offer": "10"}
   - action_update_confess_level
   - slot{"confess_level" : "high"}
-  - utter_confess
   - action_confess
 
 ## say goodbye
