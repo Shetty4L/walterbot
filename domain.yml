@@ -1,10 +1,10 @@
 intents:
   - greet
+  - judge
   - goodbye
   - ask_confession
   - threaten_suspect
   - threaten_family
-  - judge
   - evoke_guilt
   - give_offer
   - empathise
@@ -21,6 +21,9 @@ actions:
 - utter_confess_details
 - utter_confess_accomplices
 - utter_protect_accomplices
+- utter_react_family_threat
+- utter_react_bad_offer
+- utter_react_judgement
 - utter_gloat
 - utter_thanks
 - utter_goodbye
@@ -101,6 +104,8 @@ templates:
   - text: "I have no idea what you're talking about"
   - text: "You've made a mistake, it wasn't me"
   - text: "I had nothing to do with this"
+  - text: "You've got the wrong guy"
+  - text: "I've done nothing wrong"
 
   utter_confess:
   - text: "Fine, I did it. I had no other choice"
@@ -120,6 +125,24 @@ templates:
   utter_protect_accomplices:
   - text: "I did everything alone. Nobody helped me."
   - text: "Nobody else was involved"
+
+  utter_react_family_threat:
+  - text: "Leave my family alone"
+  - text: "My family have nothing to do with this"
+  - text: "My wife and children are not involved with this"
+  - text: "Don't talk about my family"
+  - text: "Don't mention them"
+  - text: "Leave them out of this"
+
+  utter_react_bad_offer:
+  - text: "That offer won't do anything"
+  - text: "You'll need to offer more if you want me to talk. For now, I don't know anything"
+  - text: "I'll need more than that"
+
+  utter_react_judgement:
+  - text: "I don't care what you think"
+  - text: "Your opinion means nothing to me"
+  - text: "If you think I care, you've got the wrong guy"
 
   utter_gloat:
   - text: "Good try"

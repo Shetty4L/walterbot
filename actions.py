@@ -40,6 +40,8 @@ class ActionUpdateConfessLevel(Action):
 			confessed_slot = SlotSet("confessed", True)
 			dispatcher.utter_template("utter_confess", tracker)
 			return [compliance_slot, confess_level_slot, confessed_slot]
+		elif not has_confessed:
+			dispatcher.utter_template("utter_deny", tracker)
 
 		return [compliance_slot, confess_level_slot]
 
@@ -53,7 +55,7 @@ class ActionUpdateConfessLevel(Action):
 		# else:
 		# 	return [SlotSet("compliance", 0.0)]
 
-		return current_compliance + 0.5
+		return current_compliance + 0.4
 
 class ActionConfess(Action):
 	def name(self):
