@@ -32,7 +32,7 @@ python -m rasa_nlu.server --path models/
 
 Query NLU Server:
 ```bash
-curl -XPOST localhost:5000/parse -d '{"q":"i will take 2 years off your sentence", "project": "current", "model": "nlu"}'
+curl -XPOST localhost:5000/parse -d '{"q":"xx", "project": "current", "model": "nlu"}'
 ```
 
 Enter Virtual Environment:

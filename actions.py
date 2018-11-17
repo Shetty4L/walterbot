@@ -87,7 +87,7 @@ class ActionIncreaseSentiment(Action):
     def run(self, dispatcher, tracker, domain):
     # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
         sentiment = float(tracker.get_slot('sentiment'))
-        return [SlotSet("sentiment", sentiment + 0.1)]
+        return [SlotSet("sentiment", sentiment + 0.2)]
 
 class ActionDecreaseSentiment(Action):
     def name(self):
@@ -97,7 +97,7 @@ class ActionDecreaseSentiment(Action):
     def run(self, dispatcher, tracker, domain):
     # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
         sentiment = float(tracker.get_slot('sentiment'))
-        return [SlotSet("sentiment", sentiment - 0.1)]
+        return [SlotSet("sentiment", sentiment - 0.2)]
 
 class ActionIncreaseFear(Action):
     def name(self):
@@ -107,7 +107,7 @@ class ActionIncreaseFear(Action):
     def run(self, dispatcher, tracker, domain):
     # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
         fear = float(tracker.get_slot('fear'))
-        return [SlotSet("fear", fear + 0.1)]
+        return [SlotSet("fear", fear + 0.2)]
 
 class ActionDecreaseFear(Action):
     def name(self):
@@ -117,7 +117,7 @@ class ActionDecreaseFear(Action):
     def run(self, dispatcher, tracker, domain):
     # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
         fear = float(tracker.get_slot('fear'))
-        return [SlotSet("fear", fear - 0.1)]
+        return [SlotSet("fear", fear - 0.2)]
 
 class ActionIncreaseAnger(Action):
     def name(self):
@@ -127,7 +127,7 @@ class ActionIncreaseAnger(Action):
     def run(self, dispatcher, tracker, domain):
     # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
         anger = float(tracker.get_slot('anger'))
-        return [SlotSet("anger", anger + 0.1)]
+        return [SlotSet("anger", anger + 0.2)]
 
 class ActionDecreaseAnger(Action):
     def name(self):
@@ -137,7 +137,7 @@ class ActionDecreaseAnger(Action):
     def run(self, dispatcher, tracker, domain):
     # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
         anger = float(tracker.get_slot('anger'))
-        return [SlotSet("anger", anger - 0.1)]
+        return [SlotSet("anger", anger - 0.2)]
 
 class ActionIncreaseGuilt(Action):
     def name(self):
@@ -147,7 +147,7 @@ class ActionIncreaseGuilt(Action):
     def run(self, dispatcher, tracker, domain):
     # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
         guilt = float(tracker.get_slot('guilt'))
-        return [SlotSet("guilt", guilt + 0.1)]
+        return [SlotSet("guilt", guilt + 0.2)]
 
 class ActionDecreaseGuilt(Action):
     def name(self):
@@ -157,7 +157,7 @@ class ActionDecreaseGuilt(Action):
     def run(self, dispatcher, tracker, domain):
     # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
         guilt = float(tracker.get_slot('guilt'))
-        return [SlotSet("guilt", guilt - 0.1)]
+        return [SlotSet("guilt", guilt - 0.2)]
 
 class ActionIncreaseTrust(Action):
     def name(self):
@@ -167,7 +167,7 @@ class ActionIncreaseTrust(Action):
     def run(self, dispatcher, tracker, domain):
     # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
         trust = float(tracker.get_slot('trust'))
-        return [SlotSet("trust", trust + 0.1)]
+        return [SlotSet("trust", trust + 0.2)]
 
 class ActionDecreaseTrust(Action):
     def name(self):
@@ -177,4 +177,4 @@ class ActionDecreaseTrust(Action):
     def run(self, dispatcher, tracker, domain):
     # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
         trust = float(tracker.get_slot('trust'))
-        return [SlotSet("trust", trust - 0.1)]
+        return [SlotSet("trust", trust - 0.2)]
