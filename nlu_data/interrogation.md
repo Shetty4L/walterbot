@@ -91,7 +91,7 @@
 - i will reduce your jail time by [2](offer) years
 - i will take [8](offer) years off your sentence
 - i will make sure you spend less time in jail
-- i will cut your jail time in [half](offer:10)
+- we can get your jail time reduced by [10](offer) years
 
 ## intent: evoke_guilt
 - you sold so many drugs that have probably killed people

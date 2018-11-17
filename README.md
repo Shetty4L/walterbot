@@ -34,3 +34,8 @@ Query NLU Server:
 ```bash
 curl -XPOST localhost:5000/parse -d '{"q":"i will take 2 years off your sentence", "project": "current", "model": "nlu"}'
 ```
+
+Enter Virtual Environment:
+```bash
+source venv/bin/activate
+```

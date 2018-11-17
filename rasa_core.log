@@ -345,3 +345,189 @@ Rasa Core server is up and running on http://localhost:5005
 /Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
   if diff:
 
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Failed to run custom action 'action_increase_anger'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: HTTPConnectionPool(host='localhost', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13ad214d0>: Failed to establish a new connection: [Errno 61] Connection refused',))
+Encountered an exception while running action 'action_increase_anger'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/rasa_core/processor.py", line 338, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/rasa_core/actions/action.py", line 323, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Failed to run custom action 'action_decrease_sentiment'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: HTTPConnectionPool(host='localhost', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13cd4d390>: Failed to establish a new connection: [Errno 61] Connection refused',))
+Encountered an exception while running action 'action_decrease_sentiment'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/rasa_core/processor.py", line 338, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/rasa_core/actions/action.py", line 323, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Failed to run custom action 'action_decrease_trust'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: HTTPConnectionPool(host='localhost', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13cd4d450>: Failed to establish a new connection: [Errno 61] Connection refused',))
+Encountered an exception while running action 'action_decrease_trust'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/rasa_core/processor.py", line 338, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/rasa_core/actions/action.py", line 323, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Failed to run custom action 'action_update_confess_level'. Couldn't connect to the server at 'http://localhost:5055/webhook'. Is the server running? Error: HTTPConnectionPool(host='localhost', port=5055): Max retries exceeded with url: /webhook (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13cd4d410>: Failed to establish a new connection: [Errno 61] Connection refused',))
+Encountered an exception while running action 'action_update_confess_level'. Bot will continue, but the actions events are lost. Make sure to fix the exception in your custom code.
+Failed to execute custom action.
+Traceback (most recent call last):
+  File "/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/rasa_core/processor.py", line 338, in _run_action
+    events = action.run(dispatcher, tracker, self.domain)
+  File "/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/rasa_core/actions/action.py", line 323, in run
+    raise Exception("Failed to execute custom action.")
+Exception: Failed to execute custom action.
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Action 'action_update_confess_level' set a slot type 'compliance' that it never set during the training. This can throw of the prediction. Make sure to include training examples in your stories for the different types of slots this action can return. Remember: you need to set the slots manually in the stories by adding '- slot{"compliance": 0.5}' after the action.
+Action 'action_update_confess_level' set a slot type 'confessed' that it never set during the training. This can throw of the prediction. Make sure to include training examples in your stories for the different types of slots this action can return. Remember: you need to set the slots manually in the stories by adding '- slot{"confessed": true}' after the action.
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Action 'action_update_confess_level' set a slot type 'confessed' that it never set during the training. This can throw of the prediction. Make sure to include training examples in your stories for the different types of slots this action can return. Remember: you need to set the slots manually in the stories by adding '- slot{"confessed": true}' after the action.
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+Rasa process starting
+Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/pykwalify/core.py:99: UnsafeLoaderWarning: 
+The default 'Loader' for 'load(stream)' without further arguments can be unsafe.
+Use 'load(stream, Loader=ruamel.yaml.Loader)' explicitly if that is OK.
+Alternatively include the following in your code:
+
+  import warnings
+  warnings.simplefilter('ignore', ruamel.yaml.error.UnsafeLoaderWarning)
+
+In most other cases you should consider using 'safe_load(stream)'
+  data = yaml.load(stream)
+
+Rasa Core server is up and running on http://localhost:5005
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
+/Users/nikhitavasani/Documents/USC/FallSem18/Affective Computing/Walter Bot Proposal/walterbot/venv/lib/python2.7/site-packages/sklearn/preprocessing/label.py:151: DeprecationWarning: The truth value of an empty array is ambiguous. Returning False, but in future this will result in an error. Use `array.size > 0` to check that an array is not empty.
+  if diff:
+
