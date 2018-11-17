@@ -70,7 +70,7 @@
   - action_decrease_trust
   - action_update_confess_level
 
-## reassuring 
+## reassuring
 * reassure
   - action_increase_trust
   - slot{"trust": 0.3}
