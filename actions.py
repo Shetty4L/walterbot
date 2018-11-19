@@ -36,10 +36,14 @@ class ActionUpdateConfessLevel(Action):
 
         has_confessed = tracker.get_slot('confessed')
 
+        print "Sentiment: {sentiment}\nFear: {fear}\nAnger: {anger}\nGuilt: {guilt}\nTrust: {trust}\nOffer: {offer}\nConfessed: {confessed}\n".format(sentiment=sentiment, fear=fear, anger=anger, guilt=guilt, trust=trust, offer=offer, confessed=has_confessed)
+
         if (not has_confessed) and (confess_level == "high" or confess_level == "medium"):
             confessed_slot = SlotSet("confessed", True)
             dispatcher.utter_template("utter_confess", tracker)
             return [compliance_slot, confess_level_slot, confessed_slot]
+        elif not has_confessed:
+            dispatcher.utter_template("utter_deny", tracker)
 
         return [compliance_slot, confess_level_slot]
 

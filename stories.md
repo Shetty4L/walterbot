@@ -39,14 +39,14 @@
   - utter_react_bad_offer
 
 ## give ok offer
-* give_offer {"offer": "5"}
+* give_offer
   - action_update_confess_level
   - slot{"confess_level" : "medium"}
   - action_confess
   - slot{"confessed": true}
 
 ## give offer high
-* give_offer {"offer": "10"}
+* give_offer
   - action_update_confess_level
   - slot{"confess_level" : "high"}
   - action_confess

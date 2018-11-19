@@ -29,6 +29,9 @@
 - do you know what we're doing here
 - are you aware of why we're questioning you
 
+## intent: neutral
+- you are making this more difficult for yourself
+
 ## intent: ask_confession
 - tell me what you did
 - did you sell drugs?
@@ -41,6 +44,7 @@
 - tell me everything
 
 ## intent: threaten_suspect
+- we have evidence against you, Mr. White
 - you're going to go down for this
 - we'll put you away for a long time
 - you're going away for over 20 years
@@ -142,6 +146,7 @@
 - who were you cooking drugs for
 - who were you making drugs for
 - who were you selling the drugs to
+- did you have any accomplices
 
 ## intent: ask_details
 - where were you cooking the drugs
