@@ -15,6 +15,7 @@ class ActionUpdateConfessLevel(Action):
         guilt = float(tracker.get_slot('guilt'))
         trust = float(tracker.get_slot('trust'))
         offer = int(tracker.get_slot('offer'))
+        offer_type = tracker.get_slot('offer_type')
 
         current_compliance = float(tracker.get_slot('compliance'))
         print current_compliance
@@ -42,7 +43,7 @@ class ActionUpdateConfessLevel(Action):
             confessed_slot = SlotSet("confessed", True)
             dispatcher.utter_template("utter_confess", tracker)
             return [compliance_slot, confess_level_slot, confessed_slot]
-        elif not has_confessed:
+        elif not has_confessed and offer_type != "bad":
             dispatcher.utter_template("utter_deny", tracker)
 
         return [compliance_slot, confess_level_slot]
@@ -182,3 +183,27 @@ class ActionDecreaseTrust(Action):
     # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
         trust = float(tracker.get_slot('trust'))
         return [SlotSet("trust", trust - 0.2)]
+
+class ActionAssessOffer(Action):
+    def name(self):
+    # type: () -> Text
+        return "action_assess_offer"
+
+    def run(self, dispatcher, tracker, domain):
+    # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
+        offer = int(tracker.get_slot('offer'))
+
+        if offer < 7:
+            return [SlotSet("offer_type", "bad")]
+
+        return [SlotSet("offer_type", "good")]
+
+class ActionResetOfferFlag(Action):
+    def name(self):
+    # type: () -> Text
+        return "action_reset_offer_flag"
+
+    def run(self, dispatcher, tracker, domain):
+    # type: (Dispatcher, DialogueStateTracker, Domain) -> Slot
+
+        return [SlotSet("offer_type", "no_offer")]
