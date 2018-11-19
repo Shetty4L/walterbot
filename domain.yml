@@ -43,7 +43,8 @@ actions:
 - action_decrease_guilt
 - action_increase_trust
 - action_decrease_trust
-
+- action_assess_offer
+- action_reset_offer_flag
 
 entities:
 - offer
@@ -59,6 +60,13 @@ slots:
     min_value: 0.0
     max_value: 20.0
     initial_value: 0.0
+  offer_type:
+      type: categorical
+      values:
+      - no_offer
+      - good
+      - bad
+      initial_value: "no_offer"
   confess_level:
     type: categorical
     values:

@@ -34,22 +34,22 @@
 
 ## give bad offer
 * give_offer {"offer": "2"}
+  - action_assess_offer
+  - slot{"offer_type": "bad"}
   - action_update_confess_level
   - slot{"confess_level" : "low"}
   - utter_react_bad_offer
+  - action_reset_offer_flag
+  - slot{"offer_type": "no_offer"}
 
-## give ok offer
-* give_offer
+## give good offer but low confess level
+* give_offer {"offer": "10"}
+  - action_assess_offer
+  - slot{"offer_type": "good"}
   - action_update_confess_level
-  - slot{"confess_level" : "medium"}
-  - action_confess
-  - slot{"confessed": true}
-
-## give offer high
-* give_offer
-  - action_update_confess_level
-  - slot{"confess_level" : "high"}
-  - action_confess
+  - slot{"confess_level" : "low"}
+  - action_reset_offer_flag
+  - slot{"offer_type": "no_offer"}
 
 ## say goodbye
 * goodbye
