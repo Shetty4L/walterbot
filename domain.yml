@@ -109,12 +109,11 @@ templates:
   - text: "How you doing"
   - text: "Hello"
   - text: "Hey"
-  - text: "What's up"
 
   utter_affirmative:
   - text: "Okay"
   - text: "Um-hmm"
-  - text: "Yes, sir"
+  - text: "Yes"
   - text: "Yeah"
 
   utter_deny:
@@ -124,6 +123,9 @@ templates:
   - text: "I had nothing to do with this"
   - text: "You've got the wrong guy"
   - text: "I've done nothing wrong"
+  - text: "Good try"
+  - text: "You'll never be able to prove anything"
+  - text: "You'll never get me"
 
   utter_confess:
   - text: "Fine, I did it. I had no other choice"
@@ -131,18 +133,24 @@ templates:
   - text: "Fine, you got me. I made and sold drugs"
   - text: "Yes, I made those drugs"
   - text: "Yes, I sold those drugs"
+  - text: "Fine, I'll tell you everything"
 
   utter_confess_details:
   - text: "Fine. I cooked the drugs in my RV, in the desert"
-  - text: "Fine, I'll tell you everything"
+  - text: "I stole the equipment from the school and used them to cook the crystal meth in my RV"
 
   utter_confess_accomplices:
   - text: "Jesse Pinkman helped me do it"
+  - text: "I knew the chemistry, Jesse knew the business"
   - text: "Gus made me do everything. He's the one you want."
 
   utter_protect_accomplices:
   - text: "I did everything alone. Nobody helped me."
   - text: "Nobody else was involved"
+
+  utter_response_threat:
+  - text: "These scare tactics won't work on me"
+  - text: "You got nothing on me"
 
   utter_react_family_threat:
   - text: "Leave my family alone"
@@ -151,6 +159,10 @@ templates:
   - text: "Don't talk about my family"
   - text: "Don't mention them"
   - text: "Leave them out of this"
+
+  utter_react_good_offer:
+  - text: "How do I know if I can trust you?"
+
 
   utter_react_bad_offer:
   - text: "That offer won't do anything"
@@ -162,10 +174,17 @@ templates:
   - text: "Your opinion means nothing to me"
   - text: "If you think I care, you've got the wrong guy"
 
-  utter_gloat:
-  - text: "Good try"
-  - text: "You'll never be able to prove anything"
-  - text: "You'll never get me"
+  utter_react_reassure:
+  - text: "I don't know if I can believe you"
+  - text: "I appreciate you saying that"
+
+  utter_react_empathise:
+  - text: "You don't know anything about me"
+  - text: "You don't know the first thing about me"
+
+  utter_react_evoke_guilt:
+  - text: "I have nothing to feel guilty about"
+  - text: "Whatever you're trying to do, will not work on me"
 
   utter_thanks:
   - text: "Thanks"

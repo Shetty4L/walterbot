@@ -54,6 +54,8 @@
 - the jury isn't going to like your case
 - you won't get away this
 - you have no chance
+- the DEA took away everything
+- we took your money, your lab, you have nothing left
 
 ## intent: threaten_family
 - your family is going to suffer now

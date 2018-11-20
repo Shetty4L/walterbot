@@ -43,8 +43,8 @@ class ActionUpdateConfessLevel(Action):
             confessed_slot = SlotSet("confessed", True)
             dispatcher.utter_template("utter_confess", tracker)
             return [compliance_slot, confess_level_slot, confessed_slot]
-        elif not has_confessed and offer_type != "bad":
-            dispatcher.utter_template("utter_deny", tracker)
+        # elif not has_confessed and offer_type != "bad":
+            # dispatcher.utter_template("utter_deny", tracker)
 
         return [compliance_slot, confess_level_slot]
 
@@ -62,12 +62,19 @@ class ActionUpdateConfessLevel(Action):
         normalized_trust = self.__normalize(guilt, (0, 1))
         normalized_offer = self.__normalize(offer, (0, 20))
 
-        new_compliance = 0.30*normalized_fear
-        new_compliance += 0.25*normalized_offer
-        new_compliance += 0.25*normalized_sentiment
-        new_compliance += 0.15*normalized_guilt
-        new_compliance += 0.15*normalized_trust
-        new_compliance -= 0.10*normalized_anger
+        # Minimization
+        compliance_min = 0.60*normalized_trust + 0.4*normalized_sentiment + 0.2*normalized_guilt - 0.2*normalized_anger
+
+        # Maximization
+        compliance_max = 0.75*normalized_fear + 0.5*normalized_guilt - 0.25*normalized_anger
+
+        # Promise
+        compliance_promise = 0.40*normalized_offer + 0.40*normalized_trust + 0.2*normalized_sentiment
+
+        # Threat
+        compliance_threat = 1.2*normalized_fear - 0.2*normalized_anger
+
+        new_compliance = max([compliance_min, compliance_max, compliance_promise, compliance_threat])
 
         return new_compliance
 
