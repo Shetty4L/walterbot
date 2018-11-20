@@ -15,6 +15,7 @@
 - we are going to read your Miranda rights
 - we already advised you of your rights
 - we are going to go through the Miranda warning again
+- i am going to read you your Miranda rights
 
 ## intent: recite_miranda
 - you have the right to remain silent
@@ -47,7 +48,6 @@
 - we have evidence against you, Mr. White
 - you're going to go down for this
 - we'll put you away for a long time
-- you're going away for over 20 years
 - your kids will be adults by the time you get out
 - you will rot in jail for ages
 - we have enough evidence to take you down
@@ -116,6 +116,8 @@
 - how much does it prey on your mind
 - do you not have a conscience
 - don't you feel guilty
+- don't you want to stop others from making the same mistakes you did
+- help us stop your accomplices from harming people
 
 ## intent: empathise
 - i understand why you did this
@@ -136,6 +138,8 @@
 - this was the only way
 - nobody's blaming you
 - i know you had your reasons
+- i know others made you do this
+- i know you were only following orders from other people
 
 ## intent: ask_accomplices
 - who helped you
