@@ -1,5 +1,6 @@
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet
+import json
 
 class ActionUpdateConfessLevel(Action):
     def name(self):
@@ -38,6 +39,20 @@ class ActionUpdateConfessLevel(Action):
         has_confessed = tracker.get_slot('confessed')
 
         print "Sentiment: {sentiment}\nFear: {fear}\nAnger: {anger}\nGuilt: {guilt}\nTrust: {trust}\nOffer: {offer}\nConfessed: {confessed}\n".format(sentiment=sentiment, fear=fear, anger=anger, guilt=guilt, trust=trust, offer=offer, confessed=has_confessed)
+
+        json_obj = dict()
+        json_obj['sentiment'] = sentiment
+        json_obj['fear'] = fear
+        json_obj['anger'] = anger
+        json_obj['guilt'] = guilt
+        json_obj['trust'] = trust
+        json_obj['offer'] = offer
+        json_obj['confessed'] = has_confessed
+        json_obj['confess_level'] = confess_level
+        json_obj['compliance'] = new_compliance
+
+        with open('personality_attr.json', 'w') as outfile:
+            json.dump(json_obj, outfile)
 
         if (not has_confessed) and (confess_level == "high" or confess_level == "medium"):
             confessed_slot = SlotSet("confessed", True)
