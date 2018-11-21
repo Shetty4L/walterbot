@@ -33,7 +33,9 @@
   - utter_deny
 
 ## ask details
-
+* ask_details
+  - slot{"confessed": true}
+  - utter_confess_details
 
 ## give bad offer
 * give_offer {"offer": "2"}
@@ -144,33 +146,37 @@
   - action_update_confess_level
 
 ## make guilty and low confess level
-* evoke_guilt
+* evoke_guilt  
+  - action_increase_guilt
+  - slot{"guilt": 0.6}
+  - action_update_confess_level
+  - slot{"confess_level": "low"}
   - utter_react_evoke_guilt
-  - action_increase_guilt
-  - slot{"guilt": 0.6}
-  - action_update_confess_level
 
 ## make guilty and medium confess level
 * evoke_guilt
   - action_increase_guilt
   - slot{"guilt": 0.6}
   - action_update_confess_level
+  - slot{"confess_level": "medium"}
 
-## make guilty and medium confess level
+## make guilty and high confess level
 * evoke_guilt
   - action_increase_guilt
   - slot{"guilt": 0.6}
   - action_update_confess_level
+  - slot{"confess_level": "high"}
 
 ## empathising and low confess level
-* empathise
-  - utter_react_empathise
+* empathise  
   - action_increase_sentiment
-  - slot{"sentiment": 0.6}
+  - slot{"sentiment": 0.2}
   - action_increase_trust
+  - slot{"trust": 0.2}
   - action_update_confess_level
-  - slot{"compliance": 0.8}
+  - slot{"compliance": 0.4}
   - slot{"confess_level": "low"}
+  - utter_react_empathise
 
 ## empathising and medium confess level
 * empathise
@@ -181,7 +187,7 @@
   - slot{"compliance": 0.8}
   - slot{"confess_level": "medium"}
 
-## empathising and medium confess level
+## empathising and high confess level
 * empathise
   - action_increase_sentiment
   - slot{"sentiment": 0.6}

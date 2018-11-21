@@ -26,7 +26,7 @@ class ActionUpdateConfessLevel(Action):
 
         confess_level = None
 
-        if new_compliance >= 0.8:
+        if new_compliance >= 0.75:
             confess_level = "high"
         elif new_compliance >= 0.5:
             confess_level = "medium"

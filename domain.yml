@@ -16,6 +16,7 @@ intents:
   - pre_recite_miranda
   - recite_miranda
   - filler_conversation
+  - neutral
 
 actions:
 - utter_greet
@@ -25,9 +26,14 @@ actions:
 - utter_confess_details
 - utter_confess_accomplices
 - utter_protect_accomplices
+- utter_react_threat
 - utter_react_family_threat
+- utter_react_good_offer
 - utter_react_bad_offer
 - utter_react_judgement
+- utter_react_reassure
+- utter_react_empathise
+- utter_react_evoke_guilt
 - utter_gloat
 - utter_thanks
 - utter_goodbye
@@ -106,7 +112,6 @@ slots:
 templates:
   utter_greet:
   - text: "Good day"
-  - text: "How you doing"
   - text: "Hello"
   - text: "Hey"
 
@@ -136,7 +141,7 @@ templates:
   - text: "Fine, I'll tell you everything"
 
   utter_confess_details:
-  - text: "Fine. I cooked the drugs in my RV, in the desert"
+  - text: "I cooked the drugs in my RV, in the desert"
   - text: "I stole the equipment from the school and used them to cook the crystal meth in my RV"
 
   utter_confess_accomplices:
@@ -145,16 +150,16 @@ templates:
   - text: "Gus made me do everything. He's the one you want."
 
   utter_protect_accomplices:
-  - text: "I did everything alone. Nobody helped me."
-  - text: "Nobody else was involved"
+  - text: "I did everything alone. No one helped me."
+  - text: "No one else was involved"
 
-  utter_response_threat:
+  utter_react_threat:
   - text: "These scare tactics won't work on me"
   - text: "You got nothing on me"
 
   utter_react_family_threat:
   - text: "Leave my family alone"
-  - text: "My family have nothing to do with this"
+  - text: "My family has nothing to do with this"
   - text: "My wife and children are not involved with this"
   - text: "Don't talk about my family"
   - text: "Don't mention them"
@@ -163,10 +168,9 @@ templates:
   utter_react_good_offer:
   - text: "How do I know if I can trust you?"
 
-
   utter_react_bad_offer:
   - text: "That offer won't do anything"
-  - text: "You'll need to offer more if you want me to talk. For now, I don't know anything"
+  - text: "You'll need to offer more if you want me to talk. For now, I know nothing"
   - text: "I'll need more than that"
 
   utter_react_judgement:
@@ -192,5 +196,4 @@ templates:
 
   utter_goodbye:
   - text: "Bye"
-  - text: "See you"
-  - text: "Goodbye"
+  - text: "See you"  
