@@ -4,3 +4,4 @@ models/
 *.pyc
 *.log
 personality_attr.json
+response_mapping.json

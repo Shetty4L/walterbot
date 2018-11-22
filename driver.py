@@ -13,17 +13,20 @@ if __name__ == '__main__':
     t = threading.Thread()
     t.start()
 
+    response_map = json.load(open('response_mapping.json', 'r'))
+
     print "Enter messages:"
     while True:
         message = raw_input()
-        if message == 'stop':
-            break
-        response = agent.handle_message(unicode(message, "utf-8"))
+        response = agent.handle_text(unicode(message, 'utf-8'))
         t.join()
-        print response
+
+        print response[0]['text'],response_map[response[0]['text']]
 
         personality_attrs_file = 'personality_attr.json'
         if os.path.exists(personality_attrs_file):
             with open(personality_attrs_file, 'r') as json_file:
                 json_obj = json.load(json_file)
                 print json_obj
+
+        print "\n"
