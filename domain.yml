@@ -1,199 +1,194 @@
-intents:
-  - greet
-  - judge
-  - goodbye
-  - ask_confession
-  - threaten_suspect
-  - threaten_family
-  - evoke_guilt
-  - give_offer
-  - empathise
-  - praise
-  - give_up
-  - reassure
-  - ask_accomplices
-  - ask_details
-  - pre_recite_miranda
-  - recite_miranda
-  - filler_conversation
-  - neutral
-
 actions:
-- utter_greet
-- utter_affirmative
-- utter_deny
-- utter_confess
-- utter_confess_details
-- utter_confess_accomplices
-- utter_protect_accomplices
-- utter_react_threat
-- utter_react_family_threat
-- utter_react_good_offer
 - utter_react_bad_offer
-- utter_react_judgement
-- utter_react_reassure
-- utter_react_empathise
-- utter_react_evoke_guilt
-- utter_gloat
-- utter_thanks
+- utter_protect_accomplices
 - utter_goodbye
-- action_update_confess_level
-- action_confess
-- action_increase_sentiment
-- action_decrease_sentiment
-- action_increase_fear
-- action_decrease_fear
-- action_increase_anger
-- action_decrease_anger
-- action_increase_guilt
-- action_decrease_guilt
-- action_increase_trust
-- action_decrease_trust
+- utter_react_good_offer
 - action_assess_offer
+- utter_affirmative
+- utter_confess
+- action_increase_sentiment
+- action_decrease_anger
+- utter_gloat
+- utter_react_evoke_guilt
+- utter_react_reassure
+- action_decrease_fear
+- utter_confess_details
+- utter_thanks
+- action_decrease_guilt
+- action_decrease_sentiment
+- action_confess
+- utter_greet
+- utter_deny
+- action_increase_guilt
+- utter_react_judgement
+- utter_react_empathise
+- action_decrease_trust
+- utter_confess_accomplices
+- action_listen
+- utter_react_threat
+- action_update_confess_level
+- utter_react_family_threat
+- action_increase_anger
+- action_increase_fear
+- action_increase_trust
 - action_reset_offer_flag
-
+config:
+  store_entities_as_slots: true
 entities:
 - offer
-
+forms: []
+intents:
+- ask_confession
+- evoke_guilt
+- praise
+- give_offer
+- empathise
+- recite_miranda
+- pre_recite_miranda
+- reassure
+- neutral
+- greet
+- ask_accomplices
+- filler_conversation
+- goodbye
+- judge
+- ask_details
+- threaten_family
+- give_up
+- threaten_suspect
 slots:
-  compliance:
-    type: float
-    min_value: 0.0
+  anger:
+    auto_fill: true
+    initial_value: 0.0
     max_value: 1.0
-    initial_value: 0.0
-  offer:
-    type: float
     min_value: 0.0
-    max_value: 20.0
+    type: rasa_core.slots.FloatSlot
+  compliance:
+    auto_fill: true
     initial_value: 0.0
-  offer_type:
-      type: categorical
-      values:
-      - no_offer
-      - good
-      - bad
-      initial_value: "no_offer"
+    max_value: 1.0
+    min_value: 0.0
+    type: rasa_core.slots.FloatSlot
   confess_level:
-    type: categorical
+    auto_fill: true
+    initial_value: low
+    type: rasa_core.slots.CategoricalSlot
     values:
     - low
     - medium
     - high
-    initial_value: "low"
-  sentiment:
-    type: float
-    min_value: -1.0
-    max_value: 1.0
-    initial_value: 0.0
-  fear:
-    type: float
-    min_value: 0.0
-    max_value: 1.0
-    initial_value: 0.0
-  anger:
-    type: float
-    min_value: 0.0
-    max_value: 1.0
-    initial_value: 0.0
-  guilt:
-    type: float
-    min_value: 0.0
-    max_value: 1.0
-    initial_value: 0.2
-  trust:
-    type: float
-    min_value: 0.0
-    max_value: 1.0
-    initial_value: 0.0
   confessed:
-    type: bool
-    initial_value: False
-
+    auto_fill: true
+    initial_value: false
+    type: rasa_core.slots.BooleanSlot
+  fear:
+    auto_fill: true
+    initial_value: 0.0
+    max_value: 1.0
+    min_value: 0.0
+    type: rasa_core.slots.FloatSlot
+  guilt:
+    auto_fill: true
+    initial_value: 0.2
+    max_value: 1.0
+    min_value: 0.0
+    type: rasa_core.slots.FloatSlot
+  offer:
+    auto_fill: true
+    initial_value: 0.0
+    max_value: 20.0
+    min_value: 0.0
+    type: rasa_core.slots.FloatSlot
+  offer_type:
+    auto_fill: true
+    initial_value: no_offer
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - no_offer
+    - good
+    - bad
+  sentiment:
+    auto_fill: true
+    initial_value: 0.0
+    max_value: 1.0
+    min_value: -1.0
+    type: rasa_core.slots.FloatSlot
+  trust:
+    auto_fill: true
+    initial_value: 0.0
+    max_value: 1.0
+    min_value: 0.0
+    type: rasa_core.slots.FloatSlot
 templates:
-  utter_greet:
-  - text: "Good day"
-  - text: "Hello"
-  - text: "Hey"
-
   utter_affirmative:
-  - text: "Okay"
-  - text: "Um-hmm"
-  - text: "Yes"
-  - text: "Yeah"
-
-  utter_deny:
-  - text: "I didn't do it"
-  - text: "I have no idea what you're talking about"
-  - text: "You've made a mistake, it wasn't me"
-  - text: "I had nothing to do with this"
-  - text: "You've got the wrong guy"
-  - text: "I've done nothing wrong"
-  - text: "Good try"
-  - text: "You'll never be able to prove anything"
-  - text: "You'll never get me"
-
+  - text: Okay
+  - text: Um-hmm
+  - text: 'Yes'
+  - text: Yeah
   utter_confess:
-  - text: "Fine, I did it. I had no other choice"
-  - text: "Ok it's true. I did it. I was desperate"
-  - text: "Fine, you got me. I made and sold drugs"
-  - text: "Yes, I made those drugs"
-  - text: "Yes, I sold those drugs"
-  - text: "Fine, I'll tell you everything"
-
-  utter_confess_details:
-  - text: "I cooked the drugs in my RV, in the desert"
-  - text: "I stole the equipment from the school and used them to cook the crystal meth in my RV"
-
+  - text: Fine, I did it. I had no other choice
+  - text: Ok it's true. I did it. I was desperate
+  - text: Fine, you got me. I made and sold drugs
+  - text: Yes, I made those drugs
+  - text: Yes, I sold those drugs
+  - text: Fine, I'll tell you everything
   utter_confess_accomplices:
-  - text: "Jesse Pinkman helped me do it"
-  - text: "I knew the chemistry, Jesse knew the business"
-  - text: "Gus made me do everything. He's the one you want."
-
-  utter_protect_accomplices:
-  - text: "I did everything alone. No one helped me."
-  - text: "No one else was involved"
-
-  utter_react_threat:
-  - text: "These scare tactics won't work on me"
-  - text: "You got nothing on me"
-
-  utter_react_family_threat:
-  - text: "Leave my family alone"
-  - text: "My family has nothing to do with this"
-  - text: "My wife and children are not involved with this"
-  - text: "Don't talk about my family"
-  - text: "Don't mention them"
-  - text: "Leave them out of this"
-
-  utter_react_good_offer:
-  - text: "How do I know if I can trust you?"
-
-  utter_react_bad_offer:
-  - text: "That offer won't do anything"
-  - text: "You'll need to offer more if you want me to talk. For now, I know nothing"
-  - text: "I'll need more than that"
-
-  utter_react_judgement:
-  - text: "I don't care what you think"
-  - text: "Your opinion means nothing to me"
-  - text: "If you think I care, you've got the wrong guy"
-
-  utter_react_reassure:
-  - text: "I don't know if I can believe you"
-  - text: "I appreciate you saying that"
-
-  utter_react_empathise:
-  - text: "You don't know anything about me"
-  - text: "You don't know the first thing about me"
-
-  utter_react_evoke_guilt:
-  - text: "I have nothing to feel guilty about"
-  - text: "Whatever you're trying to do, will not work on me"
-
-  utter_thanks:
-  - text: "Thanks"
-  - text: "I hope I did the right thing"
-
+  - text: Jesse Pinkman helped me do it
+  - text: I knew the chemistry, Jesse knew the business
+  - text: Gus made me do everything. He's the one you want.
+  utter_confess_details:
+  - text: I cooked the drugs in my RV, in the desert
+  - text: I stole the equipment from the school and used them to cook the crystal
+      meth in my RV
+  utter_deny:
+  - text: I didn't do it
+  - text: I have no idea what you're talking about
+  - text: You've made a mistake, it wasn't me
+  - text: I had nothing to do with this
+  - text: You've got the wrong guy
+  - text: I've done nothing wrong
+  - text: Good try
+  - text: You'll never be able to prove anything
+  - text: You'll never get me
   utter_goodbye:
-  - text: "Bye"
-  - text: "See you"  
+  - text: Bye
+  - text: See you
+  utter_greet:
+  - text: Good day
+  - text: Hello
+  - text: Hey
+  utter_protect_accomplices:
+  - text: I did everything alone. No one helped me.
+  - text: No one else was involved
+  utter_react_bad_offer:
+  - text: That offer won't do anything
+  - text: You'll need to offer more if you want me to talk. For now, I know nothing
+  - text: I'll need more than that
+  utter_react_empathise:
+  - text: You don't know anything about me
+  - text: You don't know the first thing about me
+  utter_react_evoke_guilt:
+  - text: I have nothing to feel guilty about
+  - text: Whatever you're trying to do, will not work on me
+  utter_react_family_threat:
+  - text: Leave my family alone
+  - text: My family has nothing to do with this
+  - text: My wife and children are not involved with this
+  - text: Don't talk about my family
+  - text: Don't mention them
+  - text: Leave them out of this
+  utter_react_good_offer:
+  - text: How do I know if I can trust you?
+  utter_react_judgement:
+  - text: I don't care what you think
+  - text: Your opinion means nothing to me
+  - text: If you think I care, you've got the wrong guy
+  utter_react_reassure:
+  - text: I don't know if I can believe you
+  - text: I appreciate you saying that
+  utter_react_threat:
+  - text: These scare tactics won't work on me
+  - text: You got nothing on me
+  utter_thanks:
+  - text: Thanks
+  - text: I hope I did the right thing

@@ -19,12 +19,14 @@
 ## asking for confession high level
 * ask_confession
   - slot{"confess_level" : "high"}
+  - utter_confess
   - action_confess
   - slot{"confessed": true}
 
 ## asking for confession medium level
 * ask_confession
   - slot{"confess_level" : "medium"}
+  - utter_confess
   - action_confess
 
 ## asking for confession low level
@@ -63,6 +65,7 @@
    - slot{"offer_type": "good"}
    - action_update_confess_level
    - slot{"confess_level" : "medium"}
+   - utter_confess
    - action_reset_offer_flag
    - slot{"offer_type": "no_offer"}
 
@@ -94,7 +97,7 @@
   - action_update_confess_level
   - slot{"confess_level": "medium"}
 
-## threatening and low confess level
+## threatening and high confess level
 * threaten_suspect
   - action_increase_fear
   - slot{"fear": 0.7}
@@ -228,3 +231,14 @@
 * ask_accomplices
   - slot{"confess_level": "low"}
   - utter_deny
+
+## judgement 2
+* judge
+    - utter_react_judgement
+    - action_increase_anger
+    - slot{"anger": 0.2}
+    - action_decrease_sentiment
+    - slot{"sentiment": -0.2}
+    - action_update_confess_level
+    - slot{"compliance": 0.28}
+    - slot{"confess_level": "low"}

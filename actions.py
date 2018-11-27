@@ -29,7 +29,7 @@ class ActionUpdateConfessLevel(Action):
 
         if new_compliance >= 0.75:
             confess_level = "high"
-        elif new_compliance >= 0.5:
+        elif new_compliance >= 0.6:
             confess_level = "medium"
         else:
             confess_level = "low"
@@ -54,10 +54,10 @@ class ActionUpdateConfessLevel(Action):
         with open('personality_attr.json', 'w') as outfile:
             json.dump(json_obj, outfile)
 
-        if (not has_confessed) and (confess_level == "high" or confess_level == "medium"):
-            confessed_slot = SlotSet("confessed", True)
-            dispatcher.utter_template("utter_confess", tracker)
-            return [compliance_slot, confess_level_slot, confessed_slot]
+        # if (not has_confessed) and (confess_level == "high" or confess_level == "medium"):
+        #     confessed_slot = SlotSet("confessed", True)
+        #     dispatcher.utter_template("utter_confess", tracker)
+        #     return [compliance_slot, confess_level_slot, confessed_slot]
         # elif not has_confessed and offer_type != "bad":
             # dispatcher.utter_template("utter_deny", tracker)
 
